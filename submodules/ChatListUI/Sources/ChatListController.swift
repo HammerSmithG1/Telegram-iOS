@@ -6679,19 +6679,19 @@ private final class ChatListLocationContext {
                     }
                 }
                 
-                if storyPostingAvailable {
-                    self.storyButton = AnyComponentWithIdentity(id: "story", component: AnyComponent(NavigationButtonComponent(
-                        content: .icon(imageName: "Chat List/AddStoryIcon"),
-                        pressed: { [weak self] _ in
-                            guard let self, let parentController = self.parentController else {
-                                return
-                            }
-                            parentController.openStoryCamera(fromList: false)
-                        }
-                    )))
-                } else {
+                // if storyPostingAvailable {
+                //     self.storyButton = AnyComponentWithIdentity(id: "story", component: AnyComponent(NavigationButtonComponent(
+                //         content: .icon(imageName: "Chat List/AddStoryIcon"),
+                //         pressed: { [weak self] _ in
+                //             guard let self, let parentController = self.parentController else {
+                //                 return
+                //             }
+                //             parentController.openStoryCamera(fromList: false)
+                //         }
+                //     )))
+                // } else {
                     self.storyButton = nil
-                }
+                // }
             } else {
                 let parentController = self.parentController
                 self.rightButton = AnyComponentWithIdentity(id: "more", component: AnyComponent(NavigationButtonComponent(

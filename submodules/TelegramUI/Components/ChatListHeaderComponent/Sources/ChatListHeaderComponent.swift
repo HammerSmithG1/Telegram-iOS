@@ -168,7 +168,8 @@ public final class ChatListHeaderComponent: Component {
         self.secondaryTransition = secondaryTransition
         self.context = context
         self.networkStatus = networkStatus
-        self.storySubscriptions = storySubscriptions
+        // self.storySubscriptions = storySubscriptions
+        self.storySubscriptions = EngineStorySubscriptions(accountItem: nil, items: [], hasMoreToken: nil)
         self.storiesIncludeHidden = storiesIncludeHidden
         self.storiesFraction = storiesFraction
         self.storiesUnlocked = storiesUnlocked
